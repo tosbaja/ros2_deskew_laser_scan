@@ -14,11 +14,12 @@ DeskewLaserScan::DeskewLaserScan(const rclcpp::NodeOptions &options)
   auto scan_sub_opts = rclcpp::SubscriptionOptions();
   scan_sub_opts.callback_group = callback_group_scan;
 
-  declare_and_get_param<int>("deskewed_scan_fixed_size", 300, deskewed_scan_fixed_size);
+  declare_and_get_param<int>("deskewed_scan_fixed_size", 1200, deskewed_scan_fixed_size);
   declare_and_get_param<std::string>("subscribe_odometry_topic", "/diff_cont/odom", subscribe_odometry_topic);
   declare_and_get_param<std::string>("base_frame", "base_link", base_frame);
   declare_and_get_param<std::string>("laser_frame", "laser_frame", laser_frame);
   declare_and_get_param<bool>("publish_pointcoud2", false, pub_pc2);
+  declare_and_get_param<bool>("invalid_range_is_inf", true, invalid_range_is_inf);
 
   declare_and_get_param<std::string>("deskew_from_scan.subscribe_laser_topic", "/scan_with_start_index", subscribe_laser_topic);
   declare_and_get_param<bool>("deskew_from_scan.use_deskew_from_scan", false, use_deskew_from_scan);
@@ -103,7 +104,11 @@ void DeskewLaserScan::pointcloud_callback(const sensor_msgs::msg::PointCloud::Co
   scan_msg_deskewed->range_max = max_range;
   scan_msg_deskewed->ranges.resize(deskewed_scan_fixed_size);
   scan_msg_deskewed->intensities.resize(deskewed_scan_fixed_size);
-
+  if(invalid_range_is_inf)
+  {
+    fill(scan_msg_deskewed->ranges.begin(), scan_msg_deskewed->ranges.end(), INFINITY);
+    fill(scan_msg_deskewed->intensities.begin(), scan_msg_deskewed->intensities.end(), INFINITY);
+  }
   for (int i = 0; i < pointcloud_msg->points.size(); i++)
   {
     tf2::Vector3 point_transformed = perform_whole_deskew(pointcloud_msg->channels[1].values[i], pointcloud_msg->points[i].x, pointcloud_msg->points[i].y);
@@ -111,7 +116,7 @@ void DeskewLaserScan::pointcloud_callback(const sensor_msgs::msg::PointCloud::Co
     const auto deskewed_range = sqrt(pow(point_transformed_3d.x, 2) + pow(point_transformed_3d.y, 2));
     const auto deskewed_angle = atan2(point_transformed_3d.y, point_transformed_3d.x);
     const int index_skewed = std::ceil((deskewed_angle - min_angle) / const_incre);
-
+    if(deskewed_range < min_range || deskewed_range > max_range) continue;
     if (index_skewed >= 0 && index_skewed < deskewed_scan_fixed_size)
     {
       scan_msg_deskewed->ranges[index_skewed] = deskewed_range;
@@ -150,7 +155,11 @@ void DeskewLaserScan::scan_callback(const sensor_msgs::msg::LaserScan::ConstShar
   scan_msg_deskewed->range_max = scan_msg_in->range_max;
   scan_msg_deskewed->ranges.resize(deskewed_scan_fixed_size);
   scan_msg_deskewed->intensities.resize(deskewed_scan_fixed_size);
-
+  if(invalid_range_is_inf)
+  {
+    fill(scan_msg_deskewed->ranges.begin(), scan_msg_deskewed->ranges.end(), INFINITY);
+    fill(scan_msg_deskewed->intensities.begin(), scan_msg_deskewed->intensities.end(), INFINITY);
+  }
   if (data_size_check == scan_msg_in->ranges.size()) // check if msg is OK
   {
     int time_ticks;

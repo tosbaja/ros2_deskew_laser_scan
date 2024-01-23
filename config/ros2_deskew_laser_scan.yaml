@@ -4,6 +4,7 @@ ros2_deskew_laser_scan:
     base_frame: "base_link"
     laser_frame: "laser_frame"
     deskewed_scan_fixed_size: 300
+    invalid_range_is_inf: true
     deskewed_scan_publish_topic: "/scan_deskewed_test"
     publish_pointcoud2: true
     deskewed_pointcloud2_publish_topic: "/pointcloud2_deskewed_test"

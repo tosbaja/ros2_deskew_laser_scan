@@ -69,6 +69,7 @@ private:
   bool pub_pc2;
   bool use_deskew_from_scan;
   bool got_transforms;
+  bool invalid_range_is_inf;
   float scan_start_angle;
   float min_angle;
   float max_angle;
