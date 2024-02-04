@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" modified="2024-02-04T23:26:56.419Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="4eNuoFt7RlUSd14qP6go" version="23.1.1" type="device">
+  <diagram name="Page-1" id="T13FORjClSeMB3_5hx7n">
+    <mxGraphModel dx="779" dy="441" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-1" target="JYWWLHJ_wSvmFDCYCCHB-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-1" value="&lt;div style=&quot;color: rgb(59, 59, 59); background-color: rgb(255, 255, 255); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="360" y="310" width="290" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-5" target="JYWWLHJ_wSvmFDCYCCHB-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-5" value="&lt;div style=&quot;color: rgb(59, 59, 59); background-color: rgb(255, 255, 255); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; line-height: 19px; font-size: 10px;&quot;&gt;nav_msgs::&lt;span style=&quot;color: #267f99;&quot;&gt;msg&lt;/span&gt;::Odometry&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="290" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-6" target="JYWWLHJ_wSvmFDCYCCHB-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-6" value="&lt;div style=&quot;color: rgb(59, 59, 59); background-color: rgb(255, 255, 255); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; line-height: 19px; font-size: 10px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;sensor_msgs::&lt;span style=&quot;color: #267f99;&quot;&gt;msg&lt;/span&gt;::LaserScan&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;OR&lt;/div&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;sensor_msgs::&lt;span style=&quot;color: #267f99;&quot;&gt;msg&lt;/span&gt;::PointCloud&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-12" target="JYWWLHJ_wSvmFDCYCCHB-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-12" value="&lt;i&gt;&lt;b&gt;SUB&lt;/b&gt;&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="260" y="305" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-13" target="JYWWLHJ_wSvmFDCYCCHB-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="430" />
+              <mxPoint x="320" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-13" value="&lt;i&gt;&lt;b&gt;SUB&lt;br&gt;&lt;/b&gt;&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="260" y="415" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-14" value="&lt;div style=&quot;color: rgb(59, 59, 59); background-color: rgb(255, 255, 255); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; line-height: 19px; font-size: 10px;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); line-height: 19px;&quot;&gt;sensor_msgs::msg::LaserScan&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); line-height: 19px;&quot;&gt;AND/NOT&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); line-height: 19px;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); line-height: 19px;&quot;&gt;sensor_msgs::&lt;span style=&quot;border-color: var(--border-color); color: rgb(38, 127, 153);&quot;&gt;msg&lt;/span&gt;::PointCloud&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="397.5" y="550" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-16" target="JYWWLHJ_wSvmFDCYCCHB-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-16" value="&lt;b&gt;&lt;i&gt;PUBLISH&lt;/i&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="465" y="485" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-17" value="&lt;b style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;&lt;font color=&quot;#1a1a1a&quot;&gt;Extract linear and angular velocity from odometry message, get only once the transfrom from odom frame to lidar frame use that pair(tf +velocities) for deskewing the&amp;nbsp;input scan message with respect to lidar frame. Finally publish deskewed scan to the system.&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="360" width="245" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-18" value="&lt;b style=&quot;border-color: var(--border-color); color: rgb(59, 59, 59); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px;&quot;&gt;ros2_deskew_laser_scan&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="482.5" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-19" target="JYWWLHJ_wSvmFDCYCCHB-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-19" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); line-height: 19px; font-size: 10px; font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; color: rgb(59, 59, 59);&quot;&gt;nav_msgs::&lt;span style=&quot;color: #267f99;&quot;&gt;msg&lt;/span&gt;::TFMessage&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="500" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="JYWWLHJ_wSvmFDCYCCHB-20" target="JYWWLHJ_wSvmFDCYCCHB-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JYWWLHJ_wSvmFDCYCCHB-20" value="&lt;b&gt;&lt;i&gt;SUB&lt;/i&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="260" y="515" width="50" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
