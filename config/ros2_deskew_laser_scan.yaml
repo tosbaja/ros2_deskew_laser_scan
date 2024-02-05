@@ -3,22 +3,20 @@ ros2_deskew_laser_scan:
     subscribe_odometry_topic: "/diff_cont/odom"
     base_frame: "base_link"
     laser_frame: "laser_frame"
-    deskewed_scan_fixed_size: 300
+    deskewed_scan_fixed_size: 620
     invalid_range_is_inf: true
-    deskewed_scan_publish_topic: "/scan_deskewed_test"
+    deskewed_scan_publish_topic: "/scan_deskewed"
     publish_pointcoud2: true
-    deskewed_pointcloud2_publish_topic: "/pointcloud2_deskewed_test"
+    deskewed_pointcloud2_publish_topic: "/pointcloud2_deskewed"
 
     deskew_from_pointcloud:
-      pointcloud_topic: "pointcloud"
+      pointcloud_topic: "/pointcloud"
       min_angle: -3.1415927410125732
       max_angle: 3.1415927410125732
       min_range: 0.05
       max_range: 50.0
     
     deskew_from_scan:
-      use_deskew_from_scan: true #deskew from pointcloud will be neglected
-      subscribe_laser_topic: "/scan_tosbaja"
+      use_deskew_from_scan: false #deskew from pointcloud will be neglected
+      subscribe_laser_topic: "/scan"
       scan_start_angle: 0.35
-
-    
