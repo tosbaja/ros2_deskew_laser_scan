@@ -95,3 +95,11 @@ You can set the parameters in under config folder in [yaml file](config/ros2_des
 `deskew_from_scan/subscribe_laser_topic` - If above is true, scan topic to use for deskew. The default is **`/scan`**.
 
 `deskew_from_scan/scan_start_angle` - Since the scan message does not contain actual information about the first taken scan range in the message, we can not now when the first scan range was taken. If the **angle_min** in the scan message corresponds also to the first taken scan range in the message, you can set this to **angle_min**. But that is not the case for [*ydlidar_ros2_driver*](https://github.com/YDLIDAR/ydlidar_ros2_driver/tree/humble) publishing the /scan message for the X4 model. The  default param is a approximate number for the ydlidar X4 **`0.35`** rad and it works fine.
+
+### Run
+
+Compile the package and simply run the launch file.
+
+```
+ros2 launch ros2_deskew_laser_scan ros2_deskew_laser_scan.launch.py
+```
